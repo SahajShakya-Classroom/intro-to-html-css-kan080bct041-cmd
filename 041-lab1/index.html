@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pratik Thapa | Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Pratik.</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#calendar">Calendar</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div>
+    <p class="greeting">Hello, I'm</p>
+    <h1 class="hero-name">Pratik Thapa</h1>
+    <h2 class="hero-role">Computer Engineering Student</h2>
+    <p class="hero-desc">
+      I build web apps and work on projects like License Plate Recognition and Data Science.
+    </p>
+
+    <div class="hero-btns">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Contact Me</a>
+    </div>
+  </div>
+
+  <div class="avatar-ring">
+    <div class="avatar">PT</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <h2 class="section-title">About <span>Me</span></h2>
+
+  <div class="about-grid">
+    <div>
+      <p>
+        I am a Computer Engineering student passionate about building real-world applications.
+        I enjoy working with Python, JavaScript, and data-driven systems.
+      </p>
+
+      <div class="skills-list">
+        <span class="skill-tag">HTML</span>
+        <span class="skill-tag">CSS</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Data Science</span>
+      </div>
+    </div>
+
+    <div class="about-stats">
+      <div class="stat-card"><span class="stat-num">3rd</span><span class="stat-label">Year</span></div>
+      <div class="stat-card"><span class="stat-num">10+</span><span class="stat-label">Projects</span></div>
+      <div class="stat-card"><span class="stat-num">5+</span><span class="stat-label">Technologies</span></div>
+      <div class="stat-card"><span class="stat-num">∞</span><span class="stat-label">Learning</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+  <h2 class="section-title">My <span>Projects</span></h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <h3>License Plate Recognition</h3>
+      <p>Detects Nepali license plates and extracts text using image processing.</p>
+      <a href="#" class="project-link">GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Data Science Notebook</h3>
+      <p>Prediction-based analysis using Python and Jupyter Notebook.</p>
+      <a href="#" class="project-link">GitHub →</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>Personal website with calendar and event tracking system.</p>
+      <a href="#" class="project-link">GitHub →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CALENDAR (same JS will work) -->
+<section id="calendar" class="calendar-section">
+  <h2 class="section-title">My <span>Calendar</span></h2>
+
+  <div class="calendar-wrapper">
+    <div class="calendar-header">
+      <button id="prevBtn">‹</button>
+      <h3 id="monthYear"></h3>
+      <button id="nextBtn">›</button>
+    </div>
+
+    <div class="calendar-grid">
+      <div>Sun</div><div>Mon</div><div>Tue</div>
+      <div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+    </div>
+
+    <div id="calendarDays" class="calendar-days"></div>
+  </div>
+
+  <input type="date" id="eventDate">
+  <input type="text" id="eventName" placeholder="Event">
+  <button onclick="addEvent()">Add Event</button>
+
+  <ul id="eventItems"></ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2 class="section-title">Contact</h2>
+
+  <form onsubmit="handleContact(event)">
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
